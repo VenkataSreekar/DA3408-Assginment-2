@@ -29,7 +29,7 @@ class Message(BaseModel):
 def healthz():
     if _model is None:
         raise HTTPException(status_code=503, detail="Model not loaded yet")
-    return {"status": "ok"}
+    return {"status": "ok", "version": "v2"}
 
 
 @app.post("/predict")

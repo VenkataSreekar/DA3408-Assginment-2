@@ -6,7 +6,7 @@ services:
     image: spam-api:redis-cache
     container_name: spam-api-redis
     ports:
-      - "8000:8000"
+      - "8080:8000"
     environment:
       - REDIS_HOST=cache
       - REDIS_PORT=6379
